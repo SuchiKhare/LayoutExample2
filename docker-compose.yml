@@ -1,0 +1,8 @@
+version: "3.2"
+services:
+  apache:
+    build: .
+    ports:
+      - "8080:80"
+    volumes:
+      - ./public_html/:/usr/locald/apache2/htdocs/
