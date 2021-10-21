@@ -40,7 +40,6 @@
         }
         #allContent{
             width: auto;
-            padding-top: 100px;
             display: inline-list-item;
         }
         #navContent {
@@ -56,8 +55,9 @@
         }
 
         #sideContent {
-            width: 220px;
+            width: 210px;
             float: left;
+            padding-left: 10px;
 
 
         }
@@ -81,6 +81,36 @@
             font-family: "Times New Roman";
             color: black;
         }
+        mark{
+            background-color: white;
+        }
+        #ratePage{
+            padding-top: 50px;
+        }
+        ul.breadcrumb {
+            padding-top: 101px;
+            list-style: none;
+        }
+
+        ul.breadcrumb li {
+            display: inline;
+            font-size: 18px;
+            color: black;
+        }
+        ul.breadcrumb li+li:before {
+            padding: 8px;
+            color: black;
+            content: "/\00a0";
+        }
+
+        ul.breadcrumb li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        ul.breadcrumb li a:hover {
+            color: black;text-decoration: underline;
+        }
 
     </style>
     <link rel="stylesheet" href="css/style.css">
@@ -94,12 +124,19 @@
         <img src="image/logo.svg" alt="logo image">
     </div>
     <menu id="primaryLinks" class="floatLeft">
-        <li><a href="index.html">Home(Learn)</a></li>
+        <li><a href="index.html">Index(Learn)</a></li>
         <li><a href="about.html">&nbsp&nbsp&nbspAbout</a></li>
         <li><a href="f-layout.html">&nbsp&nbsp&nbspLayout(learn)</a></li>
         <li><a href="z-layout.html">&nbsp&nbsp&nbspz-layout</a></li>
     </menu>
+    <div>
+        <ul  class="breadcrumb">
+            <li><a href="z-layout.html">Home</a></li>
+            <li><a href="internethistory.html">The Internet</a></li>
+        </ul>
+    </div>
 
+    </ul>
     <div id="allContent">
     <div id="navContent">
         <p><a href="#" class="bold">Internet</a></p>
@@ -109,24 +146,58 @@
         <p><a href="#">Commercial Website(Amazon/ebay)</a></p>
         <p><a href="#">Dotcom Bubble</a></p>
         <p><a href="#">IP Address and DNS</a></p>
-        <p><a href="#">Packets, Routing and Reliabilty</a></p>
+        <p><a href="#">Packets, Routing and Reliability</a></p>
         <p><a href="#">WebServer(HTTP, HTML)</a></p>
     </div>
     <div id="primaryContent">
         <article>
             <h1>What is Internet</h1>
-            <p>     The Internet (or internet) is the global system of interconnected computer..</p>
+            <p>     The Internet (or internet) is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices. It is a network of networks that consists of private, public, academic, business, and government networks of local to global scope, linked by a broad array of electronic, wireless, and optical networking technologies. </p>
             <hr>
             <h3>History</h3>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;During World War 2 - the technology used to establish the telephone calls was <u>switchboard devices</u>.
+                Problems with this was circuit switching was one long message, centralized connection and pre-allocates
+                dedicated network bandwidth. <mark class="bold">1958-1969 (ARPA)</mark>authorized by President <mark class="bold">Dwight D. Eisenhower</mark> in 1958
+                purpose R&D projects to expand the frontiers technology and able to reach far beyond military
+                requirements. 1958- NASA was established so all space project and most ARPAs funding were
+                transferred to it. Early 1960, Paul Barren developed concept of Distributed Adaptive Message Block
+                Switching which is fault tolerant and efficient routing method for telecommunication. He had this idea
+                of breaking and sending data into blocks in as fast as possible way to every directed path through mess
+                network. This experiment became the nationwide packet network and it worked.1962- Licklider was
+                appointed head of the Information Processing Techniques Office (IPTO) at ARPA. From <mark class="bold">1962-1964 Licklider</mark>,
+                the American computer scientist who helped lay the groundwork for computer networking and
+                ARPANET, the predecessor of the Internet. He called the internet of superblocks and whole idea is
+                proposed to ARPA.<mark class="bold"> 1965 - 69 ARPANET</mark> is launched the world's first successful connection, time when IP
+                network send the packets. They eventually figured how to connect to nodes and build ARPANET.
+                <mark class="bold">1970, Vint Cerf and Bob Kahn </mark>started working on design what is called INTERNET today. That was actually a
+                result of another experiment called ARPANET (Defense R&D project). 1972 - ARPANET included 37
+                networked computers. </p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In the 1980s and 1990s, <mark class="bold">Al Gore </mark> former Senator, he sponsored the bill that
+                ARPANET made as public not private. ARPANET, allowing greater public access, and helping to develop
+                the Internet.Internet become public ally available in 1991. Prior to this we have separate LAN (private
+                LAN). AOL was providing the nw to connect the network. it combined TCP-IP with http server, they ran
+                on the server and that made the internet. Internet (TCP-IP is a wide network) it supports http, ssh and
+                etc. Algore former Senator who made internet public --in the process they make ICANN (nonprofit) -
+                who maintains the internet and control the IP, DNS and sells the domain name. In 1994, <mark class="bold">Tim Berners-Lee</mark>
+                founded the World Wide Web Consortium (often referred to as "W3C") at MIT to create standards for
+                the web so that different websites work together</p>
+            <button onclick="myFunction()" id="myBtn">Read more</button>
         </article>
 
     </div>
     <div id="sideContent">
-        <div class="well">
-            <p>ADS</p>
+        <div>
+            <img height="50px" width="50px" src="image/Dwight_D._Eisenh.jpg" alt="Image of Dwight_D._Eisenh"><p>President Dwight_D. Eisenh</p>
         </div>
-        <div class="well">
-            <p>ADS</p>
+        <div>
+            <img height="50px" width="50px" src="image/Cerf_Vint.jpg" alt="image of Vint Cerf"><p>Vint Cerf</p>
+        </div>
+        <div>
+            <img height="50px" width="50px" src="image/bobkahn.jpg" alt="image of Bob Kahn"><p>Bob Kahn</p>
+        </div>
+        <div id="ratePage" >
+            <h4>Rate My Page</h4>100000&nbsp;&nbsp;<img height="20px" width="20px" src="image/like.svg" alt="image of like">
+            0&nbsp;&nbsp;<img height="20px" width="20px" src="image/dislike.png" alt="image of dislike">
         </div>
     </div>
 
